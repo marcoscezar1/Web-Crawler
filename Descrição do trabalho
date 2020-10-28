@@ -1,0 +1,16 @@
+Essa avaliação consiste na implementação de um web crawler (simplificado) utilizando sockets. Um web crawler é um software que sistematicamente varre páginas na Internet com algum objetivo. Web crawlers são usados, por exemplo, por ferramentas de busca (e.g., Google, Bing) para indexar as páginas na Internet para posterior consulta pelos usuários.
+
+Nesse trabalho, o web crawler desenvolvido terá por objetivo de criar uma cópia de uma página especificada pelo usuário no sistema de arquivos local. Assim, o programa deverá requisitar o arquivo HTML base apontado pelo endereço especificado pelo usuário, deverá fazer um parsing (simplificado) do código HTML e, posteriormente, requisitar os demais objetos referenciados pelo HTML base. Como forma de simplificar o trabalho, além do HTML base, o programa deverá baixar e salvar apenas as imagens referenciadas na página (i.e., tags <img>): outros objetos (e.g., arquivos CSS, arquivos Javascript, vídeos, áudios) podem ser ignorados. Note que, exceto por identificar os elementos <img> no HTML base, o programa não precisa realizar qualquer tipo de processamento ou interpretação do HTML base.
+
+A linguagem de programação é de livre escolha de cada grupo, mas o código-fonte deve ser compilável/executável utilizando apenas ferramentas gratuitas. Outras restrições a serem observadas pelo grupo:
+ - Os grupos devem ter, no máximo, 5 integrantes.
+ - O programa deve receber a URL da página a ser baixada como argumento de linha de comando.
+ - Tanto o código HTML base como as imagens baixadas deverão ser salvas no diretório corrente do sistema de arquivos local de onde o programa é executado.
+ - Caso o programa receba uma resposta com status diferente de 200 para o HTML base, ele deverá imprimir uma mensagem informando o status recebido ao usuário e terminar.
+ - Caso o programa receba uma resposta com status diferente de 200 para uma das imagens, ele deverá imprimir uma mensagem informando o status recebido e o a URL da mensagem, mas deverá prosseguir a execução, baixando as demais imagens.
+ - O programa deverá obrigatoriamente utilizar sockets para a comunicação com o servidor web. Todo o código que manipula os sockets e gera e interpreta as requisições e respostas HTTP deverá ser de autoria do grupo (i.e., não serão aceitos programas em que esses trechos sejam copiados de qualquer fonte ou que utilizem bibliotecas prontas para esses fins).
+ - Por outro lado, se o grupo preferir, pode utilizar bibliotecas prontas para fazer o parsing do HTML base.
+ - Não há qualquer necessidade de o programa desenvolvido suportar cookies ou redirecionamentos de página.
+ - O trabalho deverá ser entregue no formato zip, contendo todo o código fonte necessário para executar/compilar o programa e um arquivo README descrevendo os processos de compilação e execução. O arquivo README deverá também listar os nomes dos integrantes do grupo.
+ - As entregas deverão ser realizadas por um dos integrantes do grupo através dessa atividade do Classroom.
+ - Após a entrega, não serão aceitas modificações na composição do grupo.
